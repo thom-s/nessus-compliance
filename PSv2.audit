@@ -1,0 +1,21 @@
+<check_type: "Windows" version:"2">
+<group_policy: "Detect PowerShell 2.0">
+
+<custom_item>
+
+type: AUDIT_POWERSHELL
+
+description: "Powershell Version 2.0 Check"
+
+value_type: POLICY_TEXT
+
+value_data: "Disabled"
+
+powershell_args: "(Get-WindowsOptionalFeature -Online -FeatureName MicrosoftWindowsPowerShellV2).State"
+
+check_type: CHECK_EQUAL
+
+</custom_item>
+
+</group_policy>
+</check_type>
