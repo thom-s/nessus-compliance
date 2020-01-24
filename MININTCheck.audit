@@ -1,0 +1,21 @@
+<check_type: "Windows" version:"2">
+<group_policy: "Detect MININT Folder">
+
+<custom_item>
+
+type: AUDIT_POWERSHELL
+
+description: "Detect MININT Folder"
+
+value_type: POLICY_TEXT
+
+value_data: "False"
+
+powershell_args: "Test-Path C:\MININT\*"
+
+check_type: CHECK_EQUAL
+
+</custom_item>
+
+</group_policy>
+</check_type>
