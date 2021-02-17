@@ -1,0 +1,22 @@
+<check_type: "Windows" version:"2">
+<group_policy: "Detect TPM Chip Presence">
+
+<custom_item>
+
+type: AUDIT_POWERSHELL
+
+description: "Detect TPM Chip Presence"
+
+value_type: POLICY_TEXT
+
+value_data: "True"
+
+powershell_args: "(get-tpm).TpmPresent"
+
+check_type: CHECK_EQUAL
+
+</custom_item>
+
+</group_policy>
+</check_type>
+<debug/>
